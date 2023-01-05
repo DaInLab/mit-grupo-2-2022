@@ -1,6 +1,11 @@
 ---
+<<<<<<< HEAD
+title: "Teste do Grupo 2"
+author: "Nilton Cesar Ferst"
+=======
 title: "teste do grupo 2"
 author: "Ana Cláudia Lima"
+>>>>>>> 5ec1a3131cd0c59f8b3e5d9eff4f6fc4d0ac57a9
 date: "2022-11-21"
 output:
   pdf_document: default
@@ -31,6 +36,9 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+<<<<<<< HEAD
+=======
 
 tinytex::install_tinytex()
 
+>>>>>>> 5ec1a3131cd0c59f8b3e5d9eff4f6fc4d0ac57a9
