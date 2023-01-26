@@ -276,3 +276,5 @@ pie(casos_ensino,
     density = NULL, angle = 90, col = c("red", "orange", "yellow", "green", "black"),
     labels = paste(names(casos_ensino), "-", pct_ensino),
     main = "Gráfico 5: Quantidade de respondentes por nível de ensino")
+
+
