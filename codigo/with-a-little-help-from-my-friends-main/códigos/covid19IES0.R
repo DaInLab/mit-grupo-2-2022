@@ -193,7 +193,9 @@ casos_estado
 #   1   47    4
 
 pct_estado <- paste(round(unname(casos_estado) / sum(unname(casos_estado)) * 100), "%")
+
 pct_estado  
+
 #[1] "2 %"  "90 %" "8 %"
 names(pct_estado) <-c("Amazonas", "São Paulo", "Não Respondeu")
 
@@ -228,16 +230,20 @@ graph.casos_ies <- barplot(casos_ies,
                                col = "orange",
                                ylim = c(0,max(casos_ies) + 10)
 )
+
 text(x = graph.casos_ies, y = casos_ies, label = unname(pct_ies), cex=1, pos=3)
+
 axis(1, at=graph.casos_ies, labels=paste("(", pct_ies , ")"), tick=F, las=1, line=-1.0, cex.axis= 1.1)
 
 # Dados do Gráfico 7
 casos_nivel <- table(dbf.xlsx$nivel_ensino, exclude = NULL)
 casos_nivel
+
 # Doutorado     Ensino Técnico Especialização/MBA          Graduação           Mestrado      Pós-doutorado 
 #        15                  1                  1                 21                 13                  1 
 
 pct_nivel <- paste(round(unname(casos_nivel) / sum(unname(casos_nivel)) * 100), "%")
+
 pct_nivel  
 #[1] "29 %" "2 %"  "2 %"  "40 %" "25 %" "2 %"
 
@@ -260,6 +266,7 @@ axis(1, at=graph.casos_ies, labels=paste("(", pct_ies , ")"), tick=F, las=1, lin
 
 # Dados do Gráfico 8
 casos_ensino<- table(dbf.xlsx$nivel_ensino, exclude = NULL)
+
 casos_ensino
 # Doutorado     Ensino Técnico Especialização/MBA          Graduação           Mestrado      Pós-doutorado 
 #        15                  1                  1                 21                 13                  1 
@@ -276,5 +283,9 @@ pie(casos_ensino,
     density = NULL, angle = 90, col = c("red", "orange", "yellow", "green", "black"),
     labels = paste(names(casos_ensino), "-", pct_ensino),
     main = "Gráfico 5: Quantidade de respondentes por nível de ensino")
+
+
+
+
 
 
